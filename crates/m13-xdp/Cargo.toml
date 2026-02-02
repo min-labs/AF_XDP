@@ -1,0 +1,31 @@
+[package]
+name = "m13-xdp"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aya = { version = ">=0.11", features = ["async_tokio"] }
+aya-log = "0.1"
+env_logger = "0.9"
+log = "0.4"
+tokio = { version = "1.25", features = ["full"] }
+anyhow = "1.0"
+libc = "0.2"
+m13-tun = { path = "../m13-tun" }
+rlimit = "0.9"
+core_affinity = "0.8"
+nb = "1.1"
+crossbeam-queue = "0.3"
+io-uring = "0.6" # [RESTORED] THE ENGINE
+
+m13-ulk = { path = "../m13-ulk" }
+m13-hal = { path = "../m13-hal" }
+m13-mem = { path = "../m13-mem" }
+m13-pqc = { path = "../m13-pqc" }
+m13-core = { path = "../m13-core" }
+
+rand_core = "0.6"
+getrandom = "0.2"
+
+[lib]
+path = "src/lib.rs"

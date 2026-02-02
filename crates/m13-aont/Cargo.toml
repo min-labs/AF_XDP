@@ -1,0 +1,14 @@
+[package]
+name = "m13-aont"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-math = { path = "../m13-math" }
+m13-cipher = { path = "../m13-cipher" } # For coefficient generation
+m13-hal = { path = "../m13-hal" }
+zeroize = { version = "1.7", features = ["derive", "alloc"] }
+rand_core = { version = "0.6", default-features = false }
+
+# Note: 'extern crate alloc' belongs in lib.rs, not here.

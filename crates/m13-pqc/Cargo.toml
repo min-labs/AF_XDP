@@ -1,0 +1,17 @@
+[package]
+name = "m13-pqc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+zeroize = { version = "1.7", features = ["derive"] }
+rand_core = { version = "0.6", default-features = false }
+
+# Invariant I: Post-Quantum Native (FIPS 203/204 Pure Rust)
+# UPDATE: fips204 bumped to 0.4 to match ecosystem.
+fips203 = { version = "0.4", default-features = false, features = ["ml-kem-1024"] }
+fips204 = { version = "0.4", default-features = false, features = ["ml-dsa-87"] }
+
+[dev-dependencies]
+rand_core = { version = "0.6", features = ["std"] }

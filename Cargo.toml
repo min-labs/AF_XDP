@@ -1,0 +1,24 @@
+[workspace]
+members = [
+    "crates/m13-core", "crates/m13-hal", "crates/m13-mem",
+    "crates/m13-pqc", "crates/m13-cipher", "crates/m13-ulk",
+    "crates/m13-linux",
+    
+    # TRANSPORT LAYER (Sprint 35)
+    "crates/m13-tun",
+    "crates/m13-xdp",
+
+    # EXECUTABLES
+    "bin/m13-node", "bin/m13-hub",
+
+    # LOGIC
+    "crates/m13-flow", "crates/m13-raptor", "crates/m13-math"
+]
+resolver = "2"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+strip = true

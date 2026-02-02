@@ -1,0 +1,26 @@
+[package]
+name = "m13-ulk"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-hal = { path = "../m13-hal" }
+m13-mem = { path = "../m13-mem" }
+m13-pqc = { path = "../m13-pqc" }
+m13-cipher = { path = "../m13-cipher" }
+
+# ACTIVE: BBR & Fountain Codes
+m13-flow = { path = "../m13-flow" }
+m13-raptor = { path = "../m13-raptor" }
+
+# [PHYSICS] Math Engine (Required for SIMD Telemetry)
+m13-math = { path = "../m13-math" }
+
+# [FIX] m13-time and m13-safety REMOVED (Disabled in Workspace)
+
+rand_chacha = { version = "0.3", default-features = false }
+rand_core = { version = "0.6", default-features = false }
+zeroize = { version = "1.7", default-features = false }
+nb = "1.1"
+log = { version = "0.4", default-features = false }

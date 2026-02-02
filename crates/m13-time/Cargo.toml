@@ -1,0 +1,10 @@
+[package]
+name = "m13-time"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-hal = { path = "../m13-hal" }
+
+# Note: 'extern crate alloc' belongs in lib.rs.

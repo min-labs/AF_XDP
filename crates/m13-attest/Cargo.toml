@@ -1,0 +1,16 @@
+[package]
+name = "m13-attest"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-pqc = { path = "../m13-pqc" }
+m13-hal = { path = "../m13-hal" }
+zeroize = { version = "1.7", features = ["derive"] }
+rand_core = { version = "0.6", default-features = false }
+
+# LEGACY EXCEPTION (Spec §3.1):
+# Permitted ONLY for verifying TPM 2.0 ECC-P256 quotes during Epoch 0.
+p256 = { version = "0.13", default-features = false, features = ["ecdsa", "sha256"] }
+sha2 = { version = "0.10", default-features = false }

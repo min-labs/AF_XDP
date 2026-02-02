@@ -1,0 +1,30 @@
+# --- Binary & Build Artifacts ---
+target/
+*.o
+*.so
+*.a
+*.elf
+*.ko
+
+# --- Rust Specifics ---
+Cargo.lock
+# Keep Cargo.lock for binary/defense projects to ensure deterministic builds (M13 Invariant)
+# !Cargo.lock 
+
+# --- eBPF / XDP Artifacts ---
+# Exclude the compiled BPF object files; these should be rebuilt from source
+*.bpf.o
+*.skel.h
+
+# --- System & IDE Clutter ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Security & Credentials (P0: Fail-Secure) ---
+.env
+*.pem
+*.key
+auth_token.txt

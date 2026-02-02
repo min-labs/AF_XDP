@@ -1,0 +1,11 @@
+[package]
+name = "m13-mem"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+spin = "0.9" 
+zeroize = { version = "1.7", default-features = false, features = ["alloc", "derive"] }
+
+# Note: 'extern crate alloc' belongs in lib.rs.

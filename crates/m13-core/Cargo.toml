@@ -1,0 +1,11 @@
+[package]
+name = "m13-core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+zeroize = { version = "1.7", default-features = false, features = ["derive"] }
+
+[features]
+default = ["std"]
+std = []

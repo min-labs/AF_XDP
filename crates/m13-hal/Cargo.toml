@@ -1,0 +1,8 @@
+[package]
+name = "m13-hal"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+nb = "1.1" # The Standard for Non-Blocking I/O in embedded Rust

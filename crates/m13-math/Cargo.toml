@@ -1,0 +1,8 @@
+[package]
+name = "m13-math"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+zeroize = { version = "1.7", default-features = false, features = ["derive", "alloc"] }

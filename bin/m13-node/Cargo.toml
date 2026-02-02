@@ -1,0 +1,27 @@
+[package]
+name = "m13-node"
+version = "0.2.0"
+edition = "2021"
+
+[dependencies]
+# Linking AF_XDP logic (Phase 2 Prep)
+m13-xdp = { path = "../../crates/m13-xdp" }
+
+m13-linux = { path = "../../crates/m13-linux" }
+m13-ulk = { path = "../../crates/m13-ulk" }
+m13-mem = { path = "../../crates/m13-mem" }
+m13-pqc = { path = "../../crates/m13-pqc" }
+m13-core = { path = "../../crates/m13-core" }
+m13-hal = { path = "../../crates/m13-hal" }
+
+clap = { version = "4.4", features = ["derive"] }
+anyhow = "1.0"
+log = "0.4"
+env_logger = "0.10"
+colored = "2.0"
+ctrlc = "3.4"
+rand = "0.8"
+
+# [PHYSICS] Allocator & Affinity
+tikv-jemallocator = "0.5"
+core_affinity = "0.8"

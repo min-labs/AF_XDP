@@ -1,0 +1,12 @@
+[package]
+name = "m13-raptor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-math = { path = "../m13-math" }
+m13-cipher = { path = "../m13-cipher" } # For deterministic coefficients (Appx A.2)
+zeroize = { version = "1.7", features = ["derive", "alloc"] }
+
+# Note: 'extern crate alloc' belongs in lib.rs.

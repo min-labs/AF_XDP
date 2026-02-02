@@ -1,0 +1,12 @@
+[package]
+name = "m13-rlnc"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+m13-core = { path = "../m13-core" }
+m13-math = { path = "../m13-math" }
+rand_core = { version = "0.6", default-features = false }
+zeroize = { version = "1.7", features = ["derive", "alloc"] }
+
+# Note: 'extern crate alloc' belongs in lib.rs.
